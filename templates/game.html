@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% extends 'layout.html' %}
+
+    {% block content %}
+        {% if session['username'] %}
+            <h1>Welcome, {{ session['username'] }}</h1>
+            <div id="options">
+                
+                <a href="/result?id=rock">
+                    <img alt="rock image" src="../static/rock.jpeg">
+                </a>
+                <a href="/result?id=paper">
+                    <img alt="paper image" src="../static/paper.jpeg">
+                </a>
+                <a href="/result?id=scissors">
+                    <img alt="scissors image" src="../static/scissors.jpeg">
+                </a>
+                <a href="/result?id=jarrettcopy">
+                    <img alt="rock image" src="../static/custom.jpeg">
+                </a>
+            </div>
+        {% else %}
+            <p>You're not logged in</p>
+        {% endif %}
+    {% endblock %}
+
+
+</body>
+</html>

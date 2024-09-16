@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Results</title>
+</head>
+<body>
+    {%  if ret_val == 'Rock' %}
+        <img src="../static/rock.jpeg" alt="Rock image">
+    {% elseif %}
+        {% if ret_val == 'paper' %}
+            <img src="../static/paper.jpeg" alt="Paper image">
+    {% elseif %}
+            {% if ret_val == 'Scissors' %}
+                <img src="../static/scissors.jpeg" alt="Scissors image">
+    {% endif %}
+
+    <label for="results">
+        {% if ret_score == 'loss' %}
+            <p>Losses: </p>
+        {% elseif ret_score == 'wins' %}
+            <p>Wins: </p>
+    </label>
+    <a href="game.html">Play Again!</a>
+</body>
+</html>
