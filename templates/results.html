@@ -12,12 +12,23 @@
     <a href="/play/scissors"><img src="../static/scissors.jpeg" alt="Scissors"></a>
     <a href="/play/"><img src="" alt=""></a>
 
+
+    {% if ret_score == 'loss' %}
+        <p>Losses: {{ losses }}</p>
+    {% elif ret_score == 'wins' %}
+        <p>Wins: {{ wins }}</p>
+    {% else %}
+        <p>Draws: {{ draws }}</p>
+    {% endif %}
+
+
     <label for="results">
         {% if ret_score == 'loss' %}
             <p>Losses: {{ tot_losses }} </p>
         {% elseif ret_score == 'wins' %}
             <p>Wins: {{ tot_wins }} </p>
     </label>
+
     <a href="game.html">Play Again!</a>
 
 {% endblock %}
