@@ -4,3 +4,4 @@ class User:
         self.total_losses = total_losses
         self.options = options
         self.set_player_choice = set_player_choice
+        self.set_player_choice = set_player_choice

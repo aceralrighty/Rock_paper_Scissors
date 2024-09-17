@@ -1,9 +1,10 @@
+
 from random import random
 
 from flask import Flask, render_template, request
 
 
-class the_Game:
+class the_game:
     def __init__(self):
         self.tot_wins = 0
         self.tot_ties = 0
@@ -34,9 +35,8 @@ class the_Game:
 app = Flask(__name__)
 
 @app.route('/')
-def hello_world():
-    return 'Hello World!'
-
+def index():
+    return render_template("index.html")
 @app.route('/result')
 def result():
     ret_val = request.args.get('id')
