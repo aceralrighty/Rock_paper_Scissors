@@ -5,17 +5,21 @@
     <title>Results</title>
 </head>
 <body>
-<a href="/play/rock"><img src="../static/rock.jpeg" alt="Rock"></a>
+{% extends "layout.html" %}
+{% block content %}
+    <a href="/play/rock"><img src="../static/rock.jpeg" alt="Rock"></a>
     <a href="/play/paper"><img src="../static/paper.jpeg" alt="Paper"></a>
     <a href="/play/scissors"><img src="../static/scissors.jpeg" alt="Scissors"></a>
     <a href="/play/"><img src="" alt=""></a>
 
     <label for="results">
         {% if ret_score == 'loss' %}
-            <p>Losses: </p>
+            <p>Losses: {{ tot_losses }} </p>
         {% elseif ret_score == 'wins' %}
-            <p>Wins: </p>
+            <p>Wins: {{ tot_wins }} </p>
     </label>
     <a href="game.html">Play Again!</a>
+
+{% endblock %}
 </body>
 </html>

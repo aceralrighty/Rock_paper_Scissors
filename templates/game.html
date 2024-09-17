@@ -8,8 +8,8 @@
     {% extends 'layout.html' %}
 
     {% block content %}
-        {% if session['username'] %}
-            <h1>Welcome, {{ session['username'] }}</h1>
+
+            <h1>Welcome, to the best Rock. Paper, Scissors Game!!</h1>
             <div id="options">
             <a href="results.html">
                 <a href="/result?id=rock">
@@ -22,13 +22,12 @@
                     <img alt="scissors image" src="../static/scissors.jpeg">
                 </a>
                 <a href="/result?id=jarrettcopy">
-                    <img alt="rock image" src="../static/custom.jpeg">
+                    <img alt="funny picture" src="../static/custom.jpeg">
                 </a>
             </a>
             </div>
-        {% else %}
-            <p>You're not logged in</p>
-        {% endif %}
+
+        <input type="submit" value="Play">
     {% endblock %}
 
 
