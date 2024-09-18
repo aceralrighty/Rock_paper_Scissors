@@ -5,12 +5,11 @@
     <title>Results</title>
 </head>
 <body>
-{% extends "layout.html" %}
 {% block content %}
     <a href="/play/rock"><img src="../static/rock.jpeg" alt="Rock"></a>
     <a href="/play/paper"><img src="../static/paper.jpeg" alt="Paper"></a>
     <a href="/play/scissors"><img src="../static/scissors.jpeg" alt="Scissors"></a>
-    <a href="/play/"><img src="" alt=""></a>
+    <a href="/play/random"><img src="../static/custom.jpeg" alt="Custom"></a>
 
 
     {% if ret_score == 'loss' %}

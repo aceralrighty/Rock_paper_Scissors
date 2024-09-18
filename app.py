@@ -46,6 +46,15 @@ def result():
 
     return render_template("results.html", ret_val=ret_val)
 
+@app.route('/comresult')
+def computerresult():
+    comret_val = 'rock'
+
+    if not comret_val:
+        comret_val = 'No ID provided'
+
+    return render_template("results.html", comret_val=comret_val)
+
 def total_wins():
     ret_score = request.args.get('score')
 
